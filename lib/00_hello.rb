@@ -13,4 +13,5 @@ def perform
 end
 
 say_hello("Sed et Tahina")
+puts ""
 perform
