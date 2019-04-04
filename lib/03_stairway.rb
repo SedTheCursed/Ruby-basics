@@ -28,7 +28,7 @@ def throwDice(stair)
 	return stair
 end
 
-
+meuh
 
 def game(manual = true)
 	stair = 0
