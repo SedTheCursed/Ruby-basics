@@ -22,10 +22,30 @@ def throwDice(stair, solo_game = true)
 		
 	end
 	
-	puts "Maintenant tu es à la marche n°#{stair}" if solo_game
-	puts " " if solo_game
-
+	if solo_game
+		graphical_stairway(stair)
+		puts "Maintenant tu es à la marche n°#{stair}"
+		puts " "
+	end
 	return stair
+end
+
+def graphical_stairway(stair)
+	space = 11
+	brick = 0
+
+	10.times do 
+		if stair == space -1
+			puts (" " * (space-1)) + "O" + ("#" * brick)
+		else
+			puts (" " * space) + ("#" * brick)
+		end
+
+		brick += 1
+		space -= 1
+	end
+
+	puts " " * 10
 end
 
 def gameMode
