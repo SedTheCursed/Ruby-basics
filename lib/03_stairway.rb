@@ -1,28 +1,30 @@
-def throwDice(stair)
+def throwDice(stair, manual = true)
 
 	dice = rand(1..6)
 
-	puts "Le dé affice : #{dice}"
+	 puts "Le dé affice : #{dice}" if manual
 	
 	if dice >= 5
 		stair += 1 
-		puts "Tu gravis une marche, bravo !"
+		puts "Tu gravis une marche, bravo !" if manual
 		
 	
 	elsif dice == 1
 		if stair != 0
 			stair -= 1
-			puts "Tu descends d'une marche."
+			puts "Tu descends d'une marche." if manual
 		else
-			"Tu es dejà au rez-de-chaussée"
+			puts "Tu es dejà au rez-de-chaussée" if manual
 		end
 
 	else 
-		puts "Tu reste sur la même marche."
+		puts "Tu reste sur la même marche." if manual
 		
 	end
-	puts "Maintenant tu es à la marche n°#{stair}"
-	puts " "
+	if manual
+		puts "Maintenant tu es à la marche n°#{stair}"
+		puts " "
+	end
 
 	return stair
 end
@@ -42,13 +44,16 @@ def game(manual = true)
 		end
 	else
 		while stair < 10
-			stair = throwDice(stair)
+			stair = throwDice(stair, false)
 			turn += 1
 		end
 	end
-	puts " "
-	puts "Et voilà ! Tu est arrivé en haut de l'escalier !!! Enjoy the view."
-	puts "Ca t'as pris #{turn} lancés de dé."
+
+	if manual
+		puts " "
+		puts "Et voilà ! Tu est arrivé en haut de l'escalier !!! Enjoy the view."
+		puts "Ca t'as pris #{turn} lancés de dé."
+	end
 
 	return turn
 end
