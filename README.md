@@ -31,4 +31,6 @@ A chaque partie simulées, on conservait le nombre de tours effectués et on l'a
 
 Petite photo de l'equipe en fin de journée : https://lesjoiesducode.fr/quand-ca-fait-5-ans-que-tu-travailles-sur-ton-projet-de-6-mois
 
+PS : Checker la branche "Full-Game" pour un jeu de l'escalier plus complet.
+
 
