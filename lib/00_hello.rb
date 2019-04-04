@@ -12,4 +12,5 @@ def perform
     say_hello(ask_first_name)
 end
 
+say_hello("Sed et Tahina")
 perform
